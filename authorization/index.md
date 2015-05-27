@@ -211,7 +211,14 @@ Considerations](https://tools.ietf.org/html/rfc6819).
 
 * Apps MUST assure that sensitive information (authentication secrets,
 authorization codes, tokens) is transmitted ONLY to authenticated servers,
-over TLS-secured channels.
+over TLS-secured channels.  Native client applications communicating to
+servers over TLS SHALL implement best practices as documented in 
+[Recommendations for Secure Use of Transport Layer Security TLS) and 
+Datagram Transport Layer Security (DTLS)]
+(https://tools.ietf.org/html/rfc7525) or subsequent RFCs that
+supercede it.  To maximize security and interoperability, such native 
+client applications MUST continue to implement new versions of this
+best current practice that supercede previous versions.
 
 * Apps MUST generate an unpredictable `state` parameter for each user
 session.  An app MUST validate the `state` value for any request sent to its
